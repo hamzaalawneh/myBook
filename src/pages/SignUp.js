@@ -33,10 +33,7 @@ export default function SignUp(props) {
 
 
             firebase.auth().createUserWithEmailAndPassword(email, password).then(function (data) {
-                // [END createwithemail]
-                // callSomeFunction(); Optional
-                // var user = firebase.auth().currentUser;
-                console.log(data)
+         
                 data.user.updateProfile({
                     displayName: name
                 }).then(function () {
@@ -60,7 +57,6 @@ export default function SignUp(props) {
                     console.error(error);
                 }
 
-                // [END_EXCLUDE]
             });
         }
         else {

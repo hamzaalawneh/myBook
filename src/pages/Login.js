@@ -21,10 +21,10 @@ export default function Login() {
     function handleSubmit(event) {
         firebase.auth().signInWithEmailAndPassword(email, password)
             .then((data) => {
-                console.log('data is here')
-                console.log(data)
+             
                 if (data.user) {
                     localStorage.setItem('userId', data.user.uid)
+                    localStorage.setItem('userName', data.user.displayName)
                     history.push("Home")
 
                 }
