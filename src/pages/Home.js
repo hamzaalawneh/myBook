@@ -142,7 +142,7 @@ export default function Home(props) {
       userName: userName,
     })
     setPostState(!postsChanged)
-   
+    console.log(status)
   }
 
   function acceptOrReject(accepted, requestedUser, requestingUser) {
